@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../fontawesome-free-5.9.0-web/css/all.min.css" type="text/css">
     <!--External CSS-->
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="../JS/dataBarang.js"></script>
-    <title>Promo | Kardial</title>
+    <title>Semua Produk | Kardial</title>
 </head>
 <style>
 
@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="height: 10vh;">
-        <a class="navbar-brand" href="../HTML/index.html">
+        <a class="navbar-brand" href="index.html">
             <img src="../Asset/images/logo.svg" alt="" class="w-25">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,11 +38,11 @@
         </div>
     </nav>
 
-    <div class="container my-5" style="height: 180vh;">
+    <div class="container mb-5">
         <div class="row p-5 justify-content-center my-5">
-            <h1>Promo</h1>
+            <h1>Semua Produk</h1>
         </div>
-        <div class="row my-5 justify-content-center">
+        <div class="row my-5">
             <div class="col-md-2">
                 <button type="button" class="btn btn-outline-secondary" style="margin-left: 25%;" onclick="window.location.href = 'promo.html';">Promo</button>
             </div>
@@ -63,6 +63,21 @@
             </div>
         </div>
         <div class="row mb-3 " id="apendBarang">
+            <!-- <div class="col-md-4 ">
+                <div class="card ">
+                    <a href="gas.html " class="text-decoration-none text-dark ">
+                        <div class="bungkus text-center ">
+                            <img class="card-img-top " src="../Asset/images/gas.jpg " alt="Card image ">
+                        </div>
+                        <div class="card-body text-center ">
+                            <h4 class="card-title ">Gas</h4>
+                            <p class="card-text ">Rp. 8.000 | Kode : 01<br>
+                                <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
+                    class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
+                            </p>
+                        </div>
+                    </a>
+                </div> -->
                 <script>
                             let a =[]
                             for (i in Barang) {
@@ -72,41 +87,38 @@
                                 // console.log( key ,Barang[i][key]); // instead of writing object.key you can also write object[key]
                                 a[key] = Barang[i][key]
                             }
-                            if(a.promo==true){
-                                $('#apendBarang').append(`
-                                <div class="col-md-4 my-4">
-                                    <div class="card ">
-                                        <div class="bungkus text-center ">
-                                            <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
-                                        </div>
-                                            <div class="card-body text-center ">
-                                                <h4 class="card-title ">${a.Nama}</h4>
-                                                <p class="card-text ">Rp. ${a.Harga} | Kode Produk : ${a.kode}<br>
-                                                    <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
-                                        class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
-                                                </p>
-                                            </div>
-                                        </a>
+                            $('#apendBarang').append(`
+                            <div class="col-md-4 my-4">
+                                <div class="card ">
+                                    <div class="bungkus text-center ">
+                                        <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
                                     </div>
+                                        <div class="card-body text-center ">
+                                            <h4 class="card-title ">${a.Nama}</h4>
+                                            <p class="card-text ">Rp. ${a.Harga} | Kode Produk : ${a.kode}<br>
+                                                <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
+                                    class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
-                                `)
-                            }
+                            </div>
+                            `)
                         }
                 </script>
             </div>
         </div> 
     </div>
-
     <footer class="footer bg-dark">
         <small>
-            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © Kardial (A11.2018.11425) - Powered by Kardial</div>
+            <div class="text-center text-light " style="background: rgba(0, 0, 0, 0.5);">Copyright © Kardial (A11.2018.11425) - Powered by Kardial</div>
         </small>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
 </body>
 
 </html>

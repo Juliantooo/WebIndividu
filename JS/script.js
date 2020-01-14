@@ -185,7 +185,7 @@ $('#buatpesanan').click((e)=>{
     $('#nama').append($('#name').val())
     $('#imail').append($('#email').val())
     $('#alamat').append($('#subject').val())
-    $('#barang').append(namaBarang.join('  -- '))
+    $('#barang').append(namaBarang.join('   -  '))
     $('#harga').append(total)
     $('#catatan').append($('#message').val())
 

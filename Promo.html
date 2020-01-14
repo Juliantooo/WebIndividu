@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="../JS/dataBarang.js"></script>
-    <title>Mirorless | Kardial</title>
+    <title>Promo | Kardial</title>
 </head>
 <style>
 
@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="height: 10vh;">
-        <a class="navbar-brand" href="../HTML/index.html">
+        <a class="navbar-brand" href="index.html">
             <img src="../Asset/images/logo.svg" alt="" class="w-25">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +38,9 @@
         </div>
     </nav>
 
-    <div class="container my-5" style="height: 130vh;">
+    <div class="container my-5" style="height: 180vh;">
         <div class="row p-5 justify-content-center my-5">
-            <h1>Mirorless</h1>
+            <h1>Promo</h1>
         </div>
         <div class="row my-5 justify-content-center">
             <div class="col-md-2">
@@ -64,42 +64,42 @@
         </div>
         <div class="row mb-3 " id="apendBarang">
                 <script>
-                    let a =[]
-                    for (i in Barang) {
-            //json[i] is your current object inside the array, {"DisplayName":"Answer Number 1","Value":"Answer1","Option":"True"}
-                    for (key in Barang[i]) {
-            // keys are DisplayName,  Value, Option
-                        // console.log( key ,Barang[i][key]); // instead of writing object.key you can also write object[key]
-                        a[key] = Barang[i][key]
-                    }
-                    if (a.kodeName=='Mirorless'){
-                        $('#apendBarang').append(`
-                        <div class="col-md-4 my-4">
-                            <div class="card ">
-                                <div class="bungkus text-center ">
-                                    <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
-                                </div>
-                                    <div class="card-body text-center ">
-                                        <h4 class="card-title ">${a.Nama}</h4>
-                                        <p class="card-text ">Rp. ${a.Harga} | Kode Produk : ${a.kode}<br>
-                                            <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
-                                class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
-                                        </p>
+                            let a =[]
+                            for (i in Barang) {
+                    //json[i] is your current object inside the array, {"DisplayName":"Answer Number 1","Value":"Answer1","Option":"True"}
+                            for (key in Barang[i]) {
+                    // keys are DisplayName,  Value, Option
+                                // console.log( key ,Barang[i][key]); // instead of writing object.key you can also write object[key]
+                                a[key] = Barang[i][key]
+                            }
+                            if(a.promo==true){
+                                $('#apendBarang').append(`
+                                <div class="col-md-4 my-4">
+                                    <div class="card ">
+                                        <div class="bungkus text-center ">
+                                            <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
+                                        </div>
+                                            <div class="card-body text-center ">
+                                                <h4 class="card-title ">${a.Nama}</h4>
+                                                <p class="card-text ">Rp. ${a.Harga} | Kode Produk : ${a.kode}<br>
+                                                    <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
+                                        class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
+                                                </p>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
-                        </div>
-                        `)
-                    }
-                }
-        </script>
+                                </div>
+                                `)
+                            }
+                        }
+                </script>
             </div>
-        </div>
+        </div> 
     </div>
 
     <footer class="footer bg-dark">
         <small>
-            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © Kardial (A11.2018.11425) - Kardial</div>
+            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © Kardial (A11.2018.11425) - Powered by Kardial</div>
         </small>
     </footer>
     <!-- Optional JavaScript -->

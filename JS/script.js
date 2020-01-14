@@ -175,9 +175,7 @@ const getBarang = (barang)=>{
                 break;
             }
         }
-        
     }
-
 }
 
 

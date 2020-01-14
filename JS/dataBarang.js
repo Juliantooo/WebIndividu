@@ -31,7 +31,7 @@ const Barang =[
         'Nama' : 'Sony A6000',
         'Harga' : 150000,
         'kode' : 4,
-        'kodeName' : 'Action',
+        'kodeName' : 'Mirorless',
         'Gambar' : '../Asset/images/Mirrorless Sony A6000.jpg',
         'promo' : false,
         'New' : true

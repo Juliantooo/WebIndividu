@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="../JS/dataBarang.js"></script>
-    <title>DSLR | Kardial</title>
+    <title>DSLR | Kordial</title>
 </head>
 <style>
 
@@ -74,7 +74,7 @@
                             }
                             if (a.kodeName=='DSLR'){
                                 $('#apendBarang').append(`
-                                <div class="col-md-4 my-4">
+                                <div class="col-md-4 my-4 hide">
                                     <div class="card ">
                                         <div class="bungkus text-center ">
                                             <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
@@ -99,10 +99,19 @@
 
     <footer class="footer bg-dark">
         <small>
-            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © Kardial (A11.2018.11425) - Powered by Kardial</div>
+            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © Kordial (A11.2018.11425) - Powered by Kordial</div>
         </small>
     </footer>
     <!-- Optional JavaScript -->
+    <script>
+        setTimeout(() => {
+            $('.hide').each((i)=>{
+                setTimeout(() => {
+                    $('.hide').eq(i).addClass('show');
+                },400*(i+1));
+            })
+            }, 500);
+        </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

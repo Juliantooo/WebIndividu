@@ -41,6 +41,52 @@ $(document).ready(function() {
     } 
 });
 
+$(document).ready(()=>{
+   setTimeout(() => {
+    $('.tagline').addClass('show')
+   }, 2000);
+   setTimeout(() => {
+      $('.shopnow').addClass('show') 
+   }, 3000);
+})
+
+$(window).scroll(()=>{
+    var wScroll=$(this).scrollTop();
+    if(wScroll>$('.produk-baru').offset().top-370){
+        setTimeout(() => {
+            $('.hide').addClass('show');
+        }, 500);
+        setTimeout(() => {
+            $('.hideimg').each((i)=>{
+                setTimeout(() => {
+                    $('.hideimg').eq(i).addClass('show');
+                },400*(i+1));
+            })
+        }, 700);
+    }
+
+    if(wScroll>$('.diskon').offset().top-420){
+        setTimeout(() => {
+            $('.hide1').addClass('show');
+        }, 500);
+        setTimeout(() => {
+            $('.hideimg1').each((i)=>{
+                setTimeout(() => {
+                    $('.hideimg1').eq(i).addClass('show');
+                },400*(i+1));
+            })
+        }, 700);
+    }
+
+    if(wScroll>$('.tentang').offset().top-450){
+        setTimeout(() => {
+            $('.hidettg').addClass('show');
+        }, 500);
+        setTimeout(() => {
+            $('.hidedes').addClass('show');
+        }, 1000);
+    }
+})
 
 const Barang =[
     {

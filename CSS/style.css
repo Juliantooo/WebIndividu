@@ -30,6 +30,15 @@
     transition: 0.2s;
 }
 
+.tagline , .shopnow,.hide,.hideimg,.hide1,.hideimg1,.hidettg,.hidedes,.contentt{
+    opacity: 0;
+    transform: translate(0,-10px);
+}
+.show{
+    opacity: 1;
+    transform: translate(0, 10px);
+    transition: 0.5s;
+}
 
 .footer {
 

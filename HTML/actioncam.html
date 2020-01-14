@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awsome CSS-->
+    <link rel="stylesheet" href="../fontawesome-free-5.9.0-web/css/all.min.css" type="text/css">
+    <!--External CSS-->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="../JS/dataBarang.js"></script>
+    <title>Semua Produk</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <nav class=" transparent navbar navbar-expand-lg navbar-dark" style="height: 10vh;">
+        <a class="navbar-brand" href="#">
+            <h1>RentalHiking</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="index.html">Home</a>
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="allproduk.html">Produk</a>
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="about.html">About</a>
+                <a class="nav-item nav-link active mx-5" href="form_pemesanan.html"><i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" style="height: 180vh;">
+        <div class="row p-5 justify-content-center my-5">
+            <h1>Semua Produk</h1>
+        </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'promo.html';">Promo</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'dslr.html';">DSLR</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'mirorless.html';">Mirorless</button>
+            </div>
+            <div class=" col-md-2 ">
+                <button type="button " class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'actioncam.html';">Action Cam</button>
+            </div>
+            <div class="col-md-2 ">
+                <button type="button " class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'terbaru.html';">Terbaru</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary" style="margin-left: 25%;" onclick="window.location.href = 'lensa.html';">Lensa</button>
+            </div>
+        </div>
+        <div class="row mb-3 " id="apendBarang">
+            <!-- <div class="col-md-4 ">
+                <div class="card ">
+                    <a href="../HTML/gas.html " class="text-decoration-none text-dark ">
+                        <div class="bungkus text-center ">
+                            <img class="card-img-top " src="../Asset/images/gas.jpg " alt="Card image ">
+                        </div>
+                        <div class="card-body text-center ">
+                            <h4 class="card-title ">Gas</h4>
+                            <p class="card-text ">Rp. 8.000 | Kode : 01<br>
+                                <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
+                    class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
+                            </p>
+                        </div>
+                    </a>
+                </div> -->
+                <script>
+                            let a =[]
+                            for (i in Barang) {
+                    //json[i] is your current object inside the array, {"DisplayName":"Answer Number 1","Value":"Answer1","Option":"True"}
+                            for (key in Barang[i]) {
+                    // keys are DisplayName,  Value, Option
+                                // console.log( key ,Barang[i][key]); // instead of writing object.key you can also write object[key]
+                                a[key] = Barang[i][key]
+                            }
+                           if (a.kodeName=='Action') {
+                            $('#apendBarang').append(`
+                            <div class="col-md-4 my-4">
+                                <div class="card ">
+                                    <div class="bungkus text-center ">
+                                        <img class="card-img-top " src="${a.Gambar}" alt="Card image ">
+                                    </div>
+                                        <div class="card-body text-center ">
+                                            <h4 class="card-title ">${a.Nama}</h4>
+                                            <p class="card-text ">Rp. ${a.Harga} | Kode Produk : ${a.kode}<br>
+                                                <span class="text-warning "><i class="fas fa-star "></i><i class="fas fa-star "></i><i
+                                    class="fas fa-star "></i><i class="fas fa-star "></i><i class="fas fa-star "></i></span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            `)
+                           }
+                        }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark">
+        <small>
+            <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © RentalHiking (A11.2018.11425,A11.2018.11452,A11.2018.114,A11.2018.11455) - Powered by PartnerPetualang</div>
+        </small>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

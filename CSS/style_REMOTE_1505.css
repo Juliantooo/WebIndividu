@@ -1,0 +1,29 @@
+.jumbo-image{
+    height: 100vh;
+    background-image: url('../Asset/images/landingHome1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+.transparent{
+    background: rgba(0, 0, 0, 0.7);
+}
+.half-screen{
+    height: 60vh;
+}
+#btn_shopnow:hover{
+    cursor: pointer;
+    transform: translate(0,15px);
+    transition: 0.2s;
+}
+
+footer {
+    
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    line-height: 60px;
+    background-color: lightgray;
+}

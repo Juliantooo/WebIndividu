@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/form_style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 10vh;">
+        <a class="navbar-brand" href="#">
+            <h1>RentalHiking</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="index.html">Home</a>
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="allproduk.html">Produk</a>
+                <a class="nav-item nav-link active font-weight-bold mx-5" href="about.html">About</a>
+                <a class="nav-item nav-link active mx-5" href="form_pemesanan.html"><i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="content-title my-5">
+        <h1 class="text-center">Form Pemesanan</h1>
+    </div>
+
+    <div class="main-form">
+        <div class="container">
+            <div class="row ">
+                <div class="offset-3"></div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+                    <form id="contact-form" class="form" action="#" method="POST" role="form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nama</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nama" tabindex="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Alamat</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Alamat" tabindex="3">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Pesan</label>
+                            <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Diisi keterangan detail alamat dan Jasa Pengiriman" tabindex="4" required></textarea>
+                        </div>
+                        <div class="form-group my-4">
+                            <h6>Kode Barang</h6>
+                            <input type="checkbox" class="checked" value="1"><span class="mr-3">1</span>
+                            <input type="checkbox" class="checked" value="2"><span class="mr-3">2</span>
+                            <input type="checkbox" class="checked" value="3"><span class="mr-3">3</span>
+                            <input type="checkbox" class="checked" value="4"><span class="mr-3">4</span>
+                            <input type="checkbox" class="checked" value="5"><span class="mr-3">5</span>
+                            <input type="checkbox" class="checked" value="6"><span class="mr-3">6</span>
+                            <input type="checkbox" class="checked" value="7"><span class="mr-3">7</span>
+                            <input type="checkbox" class="checked" value="8"><span class="mr-3">8</span>
+                            <input type="checkbox" class="checked" value="9"><span class="mr-3">9</span>
+                            <input type="checkbox" class="checked" value="10"><span class="mr-3">10</span>
+                            <input type="checkbox" class="checked" value="11"><span class="mr-3">11</span>
+                            <input type="checkbox" class="checked" value="12"><span class="mr-3">12</span>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-start-order buatpesanan" id="buatpesanan">Buat Pesanan</button>
+                        </div>
+                    </form>
+                    <div class="content-title my-5">
+                        <h1 class="text-center">Pesanan Anda</h1>
+                    </div>
+                    <div class="bukti_pesanan">
+                        Nama : <span class="text-weight-bold" id="nama"></span>
+                        <hr> Email : <span class="text-weight-bold" id="imail"></span>
+                        <hr> Alamat : <span class="text-weight-bold" id="alamat"></span>
+                        <hr> Barang : <span class="text-weight-bold" id="barang"></span>
+                        <hr> Harga : <span class="text-weight-bold" id="harga"></span>
+                        <hr> Catatan : <span class="text-weight-bold" id="catatan"></span>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-dark">
+        <small>
+          <div class="text-center text-light" style="background: rgba(0, 0, 0, 0.5);">Copyright © RentalHiking (A11.2018.11425,A11.2018.11452,A11.2018.114,A11.2018.11455) - Powered by PartnerPetualang</div>
+      </small>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

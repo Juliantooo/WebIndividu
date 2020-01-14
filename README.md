@@ -1,2 +1,2 @@
-# WebIndividu
-Tugas Web dasar individu
+# TugasWeb
+tugas kelompok web

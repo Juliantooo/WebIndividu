@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 	// Test for placeholder support
     $.support.placeholder = (function(){
@@ -87,6 +89,7 @@ $(window).scroll(()=>{
         }, 1000);
     }
 })
+
 
 const Barang =[
     {

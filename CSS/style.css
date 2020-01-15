@@ -39,13 +39,17 @@
     transform: translate(0, 10px);
     transition: 0.5s;
 }
-
+.navbar-brand{
+    width: 30%;
+}
 .footer {
 
     height: 60px;
     line-height: 60px;
 }
-
+.nanav{
+    height: 10vh;
+}
 .bungkus {
     display: flex;
     align-items: center;
@@ -69,4 +73,14 @@
 
 .bungkusfoto {
     background-color: lightgray;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-nav>a{
+        color: black;
+    }
+    .hideimg,.hideimg1{
+        margin: auto;
+    }
+
 }
